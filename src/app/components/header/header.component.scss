@@ -1,0 +1,96 @@
+.full-width {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: white;
+    width: 100%;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding: 20px;
+
+        .menu,
+        .search {
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        img {
+            width: 1rem;
+            height: auto;
+        }
+
+        .circle-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-color: white;
+            z-index: 5;
+            position: relative;
+
+            .circle {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                color: white;
+                background-color: white;
+                font-size: 24px;
+                position: fixed;
+                top: -150px;
+                padding-bottom: 30px;
+                z-index: 5;
+                flex-direction: column;
+
+                @media (max-width: 768px) {
+                    width: 250px;
+                    height: 250px;
+                    top: -125px;
+                    padding-bottom: 20px;
+                }
+
+                .inside-text {
+                    margin-bottom: 1rem;
+                }
+
+                .title {
+                    color: var(--primary-color);
+                    font-size: 3rem;
+                    @media (max-width: 768px) {
+                        font-size: 2rem;
+                    }
+                }
+
+                .sub-title {
+                    color: var(--secondary-color);
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                }
+            }
+
+            .below-text {
+                margin-top: 20px;
+                font-size: 20px;
+                color: var(--secondary-color);
+            }
+        }
+
+
+
+
+
+    }
+}

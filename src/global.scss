@@ -1,37 +1,139 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+}
 
-/* Core CSS required for Ionic components to work properly */
-@import "@ionic/angular/css/core.css";
+.header-md {
+  box-shadow: none !important;
+}
 
-/* Basic CSS for apps built with Ionic */
-@import "@ionic/angular/css/normalize.css";
-@import "@ionic/angular/css/structure.css";
-@import "@ionic/angular/css/typography.css";
-@import "@ionic/angular/css/display.css";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Optional CSS utils that can be commented out */
-@import "@ionic/angular/css/padding.css";
-@import "@ionic/angular/css/float-elements.css";
-@import "@ionic/angular/css/text-alignment.css";
-@import "@ionic/angular/css/text-transformation.css";
-@import "@ionic/angular/css/flex-utils.css";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
-/**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
+.container {
+  width: 80%;
+  margin: 0 auto;
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
-/* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import "@ionic/angular/css/palettes/dark.system.css";
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.sub-title {
+  font-size: 1rem;
+  line-height: 2;
+  color: var(--secondary-color);
+}
+
+.main-button {
+  margin-top: 3rem;
+  padding: 0.8rem 1.5rem;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  background-color: white;
+  border: none;
+  border-radius: 5rem;
+  width: fit-content;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.custom-alert .alert-wrapper {
+  --width: 100%;
+  /* Customize width */
+  --height: auto;
+  --border-radius: 20px;
+  --box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  --background: #fff;
+  top: 20%;
+  left: 5%;
+  right: 5%;
+  position: absolute;
+  margin: 0 auto;
+  max-width: 550px;
+
+  @media (max-width: 768px) {
+    max-width: 400px;
+  }
+
+}
+
+.alert-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alert-logo {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.alert-logo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-alert h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #d9534f;
+  /* Change to the desired color */
+}
+
+.custom-alert p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.custom-alert .main-button {
+  background-color: var(--danger-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 1px;
+  padding: 1rem 3rem;
+  margin-bottom: 1rem;
+}

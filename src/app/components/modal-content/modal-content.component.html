@@ -1,0 +1,11 @@
+<div class="popup-wrapper" *ngIf="isOpen">
+  <div class="popup-content">
+    <div class="popup-logo">
+      <img src="assets/images/logo.png" alt="Logo">
+    </div>
+    <h2>Thanks for downloading our template!</h2>
+    <p>Hope that you enjoy it well! Check also our site</p>
+    <button class="custom-button" (click)="redirectToSite()">www.symu.co</button>
+    <button class="close-button" (click)="close()">Close</button>
+  </div>
+</div>

@@ -1,0 +1,112 @@
+.full-width {
+    width: 100%;
+    background-color: var(--light-color);
+    position: relative;
+    min-height: 70dvh;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        min-height: 70dvh;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 2rem;
+
+        }
+
+        .left {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .first,
+            .second {
+                position: absolute;
+
+                @media (max-width: 768px) {
+                    position: relative;
+                }
+
+                min-height: 70dvh;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    max-width: 100%;
+                    min-height: 70dvh;
+                    max-height: 70dvh;
+                    object-fit: fill;
+                }
+            }
+
+            .first {
+                z-index: 1;
+
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            .second {
+                z-index: 2;
+            }
+        }
+
+        .right {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-self: start;
+            gap: 1rem;
+            padding-bottom: 1rem;
+            @media (max-width: 768px) {
+                padding-left: 2rem;
+                gap: 0;
+            }
+
+            .title {
+                color: var(--danger-color);
+                font-weight: normal;
+                letter-spacing: 2px;
+            }
+
+            .name,
+            .position {
+                font-size: 0.8rem;
+            }
+
+            .name {
+                margin-top: 4rem;
+
+                @media (max-width: 768px) {
+                    margin-top: 2rem;
+                }
+            }
+
+            .position {
+                color: var(--secondary-color);
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .full-width .container {
+        flex-direction: column;
+    }
+
+    .full-width .left,
+    .full-width .right {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .full-width .left .first,
+    .full-width .left .second {
+        position: relative;
+        min-height: auto;
+    }
+}
